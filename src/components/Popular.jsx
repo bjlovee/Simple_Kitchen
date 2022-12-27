@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-// import { json } from "express";
 
 
 function Popular() {
@@ -97,7 +96,7 @@ p{
 `;
 
 const Gradient = styled.div`
-z-index: 3;
+// z-index: 3;
 position: absolute;
 width: 100%;
 height: 100%;
