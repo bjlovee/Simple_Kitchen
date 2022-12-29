@@ -20,7 +20,8 @@ const submitHandler = (e) => {
         <FaSearch></FaSearch>
     <input onChange={(e) => setInput(e.target.value)}
      type="text" 
-     value={input}  
+     value={input} 
+     placeholder="search for anything"
      />
     </div>
    </FormStyle>
