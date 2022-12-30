@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-
 import React from 'react'
+import RatingStyles, { Rating } from "../components/RatingStyles";
+
 
 function Recipe() {
 
@@ -24,6 +25,8 @@ useEffect(() => {
     <DetailWrapper>
       <div>
         <h2>{details.title}</h2>
+        
+        <Rating />
         <img src={details.image} alt="" />
       </div>
       <Info>
@@ -39,8 +42,19 @@ useEffect(() => {
         >
             Ingredients
             </Button>
-            <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
-            <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
+            {activeTab === 'instructions' && (
+                <diV>
+                <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
+                <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
+                </diV>
+            )}
+            {activeTab === "ingredients" && (
+                <ul>
+                {details.extendedIngredients.map((ingredients) =>
+                <li key={ingredients.id}>{ingredients.original}</li>
+                )}  
+              </ul>
+            )}
       </Info>
     </DetailWrapper>
   )
