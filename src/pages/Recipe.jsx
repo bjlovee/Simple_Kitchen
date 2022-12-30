@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import React from 'react'
-import RatingStyles, { Rating } from "../components/RatingStyles";
+
 
 
 function Recipe() {
@@ -25,8 +25,6 @@ useEffect(() => {
     <DetailWrapper>
       <div>
         <h2>{details.title}</h2>
-        
-        <Rating />
         <img src={details.image} alt="" />
       </div>
       <Info>
