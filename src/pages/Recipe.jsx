@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import React from 'react'
+import StarRating from "../components/StarRating";
 
 
 
@@ -10,6 +11,7 @@ function Recipe() {
 let params = useParams();
 const [details, setDtails] = useState({});
 const [activeTab, setActiveTab] = useState('instructions');
+const [rating, setRating] = useState(0);
 
 const fetchDetails = async () => {
     const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`)
@@ -24,6 +26,8 @@ useEffect(() => {
   return (
     <DetailWrapper>
       <div>
+      <StarRating />
+      <br />
         <h2>{details.title}</h2>
         <img src={details.image} alt="" />
       </div>
