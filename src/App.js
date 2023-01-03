@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Nav>
-        <GiFruitBowl />
+        <GiFruitBowl color="#e27429" />
         <Logo to={"/"}>Simple Kitchen</Logo>
       </Nav>
       <Search />
@@ -32,6 +32,7 @@ const Logo = styled(Link)`
   font-size 1.5rem;
   font-weight 400;
   font-family: 'Lobster Two', cursive;
+  color:white;
 `
 
 const Nav = styled.div`

@@ -67,10 +67,11 @@ margin-top: 10rem;
 margin-bottom: 2rem;
 display: flex;
 .active{
-    background: linear-gradient(35deg, #494949, #313131);
+    background: linear-gradient(35deg, #e27429, #313131);
     color: white;
 }
 h2 {
+  color: white;
     margin-bottom: 2rem;
 }
 li {
@@ -80,15 +81,17 @@ li {
 ul {
     margin-top: 2rem;
 }
+
 `
 
 const Button = styled.button`
 padding: 1rem 2rem;
-color: #313131;
-background: white;
+color: white;
+background: #494949;
 border: 2px solid black;
  margin-right 2rem;
  font-weight: 600;
+ margin-top: 1rem; 
 `
 
 const Info = styled.div`
