@@ -17,7 +17,7 @@ const submitHandler = (e) => {
     
    <FormStyle onSubmit={submitHandler}>
     <div>
-        <FaSearch></FaSearch>
+        <FaSearch color="#e27429"></FaSearch>
     <input onChange={(e) => setInput(e.target.value)}
      type="text" 
      value={input} 

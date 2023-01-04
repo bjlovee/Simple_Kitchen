@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
       <Nav>
         <GiFruitBowl color="#e27429" />
-        <Logo to={"/"}>Simple Kitchen</Logo>
+        <Logo to={"/home"}>Simple Kitchen</Logo>
       </Nav>
       <Search />
         <Catagory />

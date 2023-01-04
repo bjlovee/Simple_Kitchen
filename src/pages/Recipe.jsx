@@ -51,7 +51,7 @@ useEffect(() => {
                 </diV>
             )}
             {activeTab === "ingredients" && (
-                <ul>
+                <ul color="white">
                 {details.extendedIngredients.map((ingredients) =>
                 <li key={ingredients.id}>{ingredients.original}</li>
                 )}  

@@ -9,7 +9,7 @@
 
 
 body {
-  background-color: #385E3C;
+  background-color: #222222;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
@@ -56,4 +56,9 @@ input[type="radio"] {
 
 p {
   color: white;
+}
+
+ul{
+  color: white;
+  font-weight: bolder;
 }
