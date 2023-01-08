@@ -1,29 +1,27 @@
 // AuthPage.js
 
-import SignUpForm from "../../components/SignUpForm/SignUpForm"
-import LoginForm from "../../components/LoginForm/LoginForm"
-import styled from "styled-components"
-import {GiFruitBowl} from "react-icons/gi"
+import SignUpForm from '../../components/SignUpForm/SignUpForm'
+import LoginForm from '../../components/LoginForm/LoginForm'
+import styled from 'styled-components'
+import { GiFruitBowl } from 'react-icons/gi'
 
-
-export default function AuthPage(props){
-   
-    return(
-        <main>
-            <Logo>
-            <GiFruitBowl color="#e27429" /> 
-            <h4 className="authLogo">Simple Kitchen</h4>
-            </Logo>
-            <br/>
-            <br/>
-            <Form>
-            <SignUpForm setUser={props.setUser}/>
-            <Vertical />
-            <LoginForm setUser={props.setUser}/>
-            </Form>
-            <img  className="Img" src="/images/food.jpg" alt=""/>
-        </main>
-    )
+export default function AuthPage (props) {
+  return (
+    <main>
+      <Logo>
+        <GiFruitBowl color='#e27429' />
+        <h4 className='authLogo'>Simple Kitchen</h4>
+      </Logo>
+      <br />
+      <br />
+      <Form>
+        <SignUpForm setUser={props.setUser} />
+        <Vertical />
+        <LoginForm setUser={props.setUser} />
+      </Form>
+      <img className='Img' src='/images/food.jpg' alt='' />
+    </main>
+  )
 }
 
 const Logo = styled.div`

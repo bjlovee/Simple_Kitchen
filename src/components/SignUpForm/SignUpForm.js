@@ -33,8 +33,8 @@ export default class SignUpForm extends Component {
       <div>
         <div className='form-container'>
           <form autoComplete='off' onSubmit={this.handleSubmit}>
-          <h1>SignUp</h1>
-          <br/>
+            <h1>SignUp</h1>
+            <br />
             <label>Name</label>
             <input type='text' name='name' value={this.state.name} onChange={this.handleChange} required />
             <label>Email</label>
@@ -43,8 +43,8 @@ export default class SignUpForm extends Component {
             <input type='password' name='password' value={this.state.password} onChange={this.handleChange} required />
             <label>Confirm</label>
             <input type='password' name='confirm' value={this.state.confirm} onChange={this.handleChange} required />
-            <br/>
-            <br/>
+            <br />
+            <br />
             <button className='sigLog' type='submit' disabled={disable}>SIGN UP</button>
           </form>
         </div>

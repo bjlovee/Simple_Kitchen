@@ -1,30 +1,30 @@
-import styled from "styled-components"
-import { useState } from "react"
-import { FaSearch } from "react-icons/fa"
-import { useNavigate } from "react-router-dom";
+import styled from 'styled-components'
+import { useState } from 'react'
+import { FaSearch } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
-function Search() {
+function Search () {
+  const [input, setInput] = useState('')
+  const navigate = useNavigate()
 
-const [input, setInput] = useState("");
-const navigate = useNavigate();
-
-const submitHandler = (e) => {
-    e.preventDefault();
+  const submitHandler = (e) => {
+    e.preventDefault()
     navigate('/searched/' + input)
-}
+  }
 
   return (
-    
-   <FormStyle onSubmit={submitHandler}>
-    <div>
-        <FaSearch color="#e27429"></FaSearch>
-    <input onChange={(e) => setInput(e.target.value)}
-     type="text" 
-     value={input} 
-     placeholder="search for anything"
-     />
-    </div>
-   </FormStyle>
+
+    <FormStyle onSubmit={submitHandler}>
+      <div>
+        <FaSearch color='#e27429' />
+        <input
+          onChange={(e) => setInput(e.target.value)}
+          type='text'
+          value={input}
+          placeholder='search for anything'
+        />
+      </div>
+    </FormStyle>
   )
 }
 
