@@ -12,10 +12,10 @@ export default function AuthPage(props){
         <main>
             <Logo>
             <GiFruitBowl color="#e27429" /> 
-            <h5>Simple Kitchen</h5>
-            <br/>
-            <br/>
+            <h4 className="authLogo">Simple Kitchen</h4>
             </Logo>
+            <br/>
+            <br/>
             <Form>
             <SignUpForm setUser={props.setUser}/>
             <Vertical />
@@ -28,8 +28,9 @@ export default function AuthPage(props){
 
 const Logo = styled.div`
 display: flex;
+justify-content: start;
 text-decoration: none;
-font-size 1.5rem;
+font-size 2.5rem;
 font-weight 400;
 font-family: 'Lobster Two', cursive;
 color:white;

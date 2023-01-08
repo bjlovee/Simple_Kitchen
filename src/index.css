@@ -101,3 +101,11 @@ h5{
     transform: rotateZ(-10deg);
     transition: 1s ease;
     }
+
+.authLogo {
+  display: flex;
+  justify-content: start;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Lobster Two', cursive;
+}
