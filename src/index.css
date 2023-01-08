@@ -62,3 +62,42 @@ ul{
   color: white;
   font-weight: bolder;
 }
+
+h5{
+  font-family: 'Lobster Two', cursive;
+}
+
+.sigLog{
+  background-color: #e27429;
+  font-size: 18px;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 2px solid #e27429;
+}
+
+.sigLog {
+  transition-duration: 0.4s;
+}
+
+.sigLog:hover {
+  color: white;
+}
+
+.Img {
+  position: absolute;
+  height: 400px;
+  width: 60%;
+  margin-top: 13rem;
+  border-style: none;
+}
+
+.Img {
+  transition: 1s ease;
+  }
+
+  .Img :hover {
+    -webkit-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+    transition: 1s ease;
+    }

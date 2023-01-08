@@ -1,28 +1,55 @@
 import Pages from "./pages/Pages";
+import AuthPage from "./pages/AuthPage/AuthPage";
 import Catagory from "./components/Catagory";
 import { BrowserRouter } from "react-router-dom";
 import Search from "./components/Search";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import {GiFruitBowl} from "react-icons/gi"
-
+import { useState, useEffect } from "react";
 
 
 
 
 function App() {
   
+  const [state, setState] = useState(null)
+  const [user, setUser ] = useState(null)
+
+  const fetchState = async () => {
+    try {
+      const response = await fetch('/api/test')
+      const data = await response.json()
+      setState(data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  useEffect(() => {
+    fetchState()
+  }, [])
+  
+
   return (
     <div className="App">
-      <BrowserRouter>
-      <Nav>
-        <GiFruitBowl color="#e27429" />
-        <Logo to={"/home"}>Simple Kitchen</Logo>
-      </Nav>
-      <Search />
-        <Catagory />
-        <Pages />
-      </BrowserRouter>
+      {
+        user ?
+      <>
+        <BrowserRouter>
+        <Nav>
+          <GiFruitBowl color="#e27429" />
+          <Logo to={"/"}>Simple Kitchen</Logo>
+        </Nav>
+        <Search />
+          <Catagory />
+          <Pages />
+        </BrowserRouter>
+      </>
+      :
+      <AuthPage setUser={setUser}/>
+      }
+      
     </div>
   );
 }
