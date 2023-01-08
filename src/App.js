@@ -40,7 +40,7 @@ function App () {
             <BrowserRouter>
               <Nav>
                 <GiFruitBowl color='#e27429' />
-                <Logo to='/'>Simple Kitchen</Logo>
+                <Logo  to='/'>Simple Kitchen</Logo>
               </Nav>
               <Search />
               <Catagory />
@@ -56,7 +56,7 @@ function App () {
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-size 1.5rem;
+  font-size 2.0rem;
   font-weight 400;
   font-family: 'Lobster Two', cursive;
   color:white;
@@ -68,7 +68,7 @@ display: flex;
 justify-content: flex-start;
 align-items: center;
 svg{
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 `
 

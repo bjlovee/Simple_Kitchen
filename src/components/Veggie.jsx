@@ -33,7 +33,7 @@ function Veggie () {
 
         <Splide options={{
           perPage: 3,
-          arrows: false,
+          // arrows: false,
           pagination: false,
           drag: 'free',
           gap: '5rem '
