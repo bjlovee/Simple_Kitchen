@@ -30,7 +30,7 @@ function App () {
     <div className='App'>
       <Helmet>
         <meta charSet='utf-8' />
-        <title>Simple Kitchen</title>
+        <title>simple-kitchen</title>
         <link rel='canonical' href='http://mysite.com/example' />
         <meta name='description' content='Helmet application' />
       </Helmet>
