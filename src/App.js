@@ -7,6 +7,8 @@ import styled from 'styled-components'
 import { GiFruitBowl } from 'react-icons/gi'
 import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
+import SignOut from './components/SignOut'
+
 
 function App () {
   const [state, setState] = useState(null)
@@ -42,6 +44,7 @@ function App () {
                 <GiFruitBowl color='#e27429' />
                 <Logo  to='/'>Simple Kitchen</Logo>
               </Nav>
+              <SignOut setUser={setUser} />
               <Search />
               <Catagory />
               <Pages />
