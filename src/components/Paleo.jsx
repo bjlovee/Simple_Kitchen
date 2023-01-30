@@ -4,24 +4,24 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import { Link } from 'react-router-dom'
 
-function Veggie () {
-  const [veggie, setVeggie] = useState([])
+function Paleo () {
+  const [Paleo, setPaleo] = useState([])
 
   useEffect(() => {
-    getVeggie();
+    getPaleo();
   }, [])
 
-  const getVeggie = async () => {
-    const check = localStorage.getItem('veggie')
+  const getPaleo = async () => {
+    const check = localStorage.getItem('paleo')
 
     if (check) {
-      setVeggie(JSON.parse(check))
+      setPaleo(JSON.parse(check))
     } else {
-      const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`)
+      const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=paleo`)
       const data = await api.json()
 
-      localStorage.setItem('veggie', JSON.stringify(data.recipes))
-      setVeggie(data.recipes)
+      localStorage.setItem('paleo', JSON.stringify(data.recipes))
+      setPaleo(data.recipes)
       console.log(data.recipes)
     }
   }
@@ -29,7 +29,7 @@ function Veggie () {
   return (
     <div>
       <Wrapper>
-        <h3>Vegetarian Picks</h3>
+        <h3>Paleo LifeStyle</h3>
 
         <Splide options={{
           perPage: 3,
@@ -39,7 +39,7 @@ function Veggie () {
           gap: '5rem '
         }}
         >
-          {veggie.map((recipe) => {
+          {Paleo.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
@@ -99,4 +99,4 @@ height: 100%;
 background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `
 
-export default Veggie
+export default Paleo

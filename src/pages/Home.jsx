@@ -1,7 +1,15 @@
-import Veggie from '../components/Veggie'
+
 import React from 'react'
-import Popular from '../components/Popular'
 import { motion } from 'framer-motion'
+import Keto from '../components/Keto'
+import Veggie from '../components/Veggie'
+import Popular from '../components/Popular'
+import Paleo from '../components/Paleo'
+import Whole30 from '../components/Whole30'
+import Mediterranean from '../components/Mediterranean'
+
+
+
 
 function Home () {
   return (
@@ -13,6 +21,10 @@ function Home () {
     >
       <Veggie />
       <Popular />
+      <Paleo />
+      <Keto />
+      <Whole30 />
+      <Mediterranean />
     </motion.div>
   )
 }
