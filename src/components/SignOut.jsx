@@ -13,7 +13,7 @@ function SignOut({setUser}) {
   return (
     <div>
         <SignoutStyle onClick={handleClick}>
-        <GoSignOut color='#e27429'/>
+        <GoSignOut color='#FFB85D'/>
         </SignoutStyle>
     </div>
   )

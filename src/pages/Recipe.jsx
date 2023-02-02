@@ -63,7 +63,7 @@ margin-top: 10rem;
 margin-bottom: 2rem;
 display: flex;
 .active{
-    background: linear-gradient(35deg, #e27429, #313131);
+    background: linear-gradient(35deg, #FFB85D, #313131);
     color: white;
 }
 h2 {

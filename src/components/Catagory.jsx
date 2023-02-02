@@ -54,7 +54,7 @@ h4{
 }
 
 svg{
-    color: white;
+    color: #FFB85D;
     font-size: 1.5rem;
 }
 &.active{

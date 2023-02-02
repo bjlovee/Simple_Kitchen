@@ -9,7 +9,7 @@ export default function AuthPage (props) {
   return (
     <main>
       <Logo>
-        <GiFruitBowl color='#e27429' />
+        <GiFruitBowl color='#FFB85D' />
         <h4 className='authLogo'>Simple Kitchen</h4>
       </Logo>
       <br />
@@ -36,7 +36,7 @@ color:white;
 
 const Form = styled.div`
 display: flex;
-color: #e27429;
+color: #FFB85D;
     height:200px;
     font-size:14pt;
     height:200px;
@@ -45,7 +45,7 @@ color: #e27429;
 `
 
 const Vertical = styled.div`
-border-left: 6px solid #e27429;
+border-left: 6px solid #FFB85D;
       height: 320px;
       position:absolute;
       left: 50%;

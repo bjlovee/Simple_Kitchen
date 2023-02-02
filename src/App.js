@@ -41,10 +41,10 @@ function App () {
           ? <>
             <BrowserRouter>
               <Nav>
-                <GiFruitBowl color='#e27429' />
+                <GiFruitBowl color='#FFB85D' />
                 <Logo  to='/'>Simple Kitchen</Logo>
               </Nav>
-              <SignOut setUser={setUser} />
+              <SignOut setUser={setUser} color='#FFB85D' />
               <Search />
               <Catagory />
               <Pages />
